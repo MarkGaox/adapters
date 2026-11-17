@@ -1,0 +1,14 @@
+# Identity overlay for TapeoutBench tasks.
+#
+# Upstream TapeoutBench tasks already ship a complete Harbor task.toml (timeouts,
+# resources, verifier settings). The adapter keeps that file and only replaces the
+# [task] fields below, with {task_id} set to the upstream task id. See adapter.py.
+
+schema_version = "1.0"
+
+[task]
+name = "simra/tapeoutbench__{task_id}"
+authors = [
+    { name = "Simra AI", email = "info@simra.tech" },
+]
+keywords = ["tapeoutbench", "chip-design", "eda", "analog", "mixed-signal"]

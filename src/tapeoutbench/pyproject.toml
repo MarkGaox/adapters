@@ -1,0 +1,25 @@
+[project]
+name = "harbor-tapeoutbench-adapter"
+version = "0.1.0"
+description = "Harbor adapter for TapeoutBench v0.1 (Simra AI)"
+readme = "README.md"
+authors = [
+    { name = "Xiaxuan", email = "TODO" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "tomlkit>=0.13",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[project.scripts]
+tapeoutbench = "tapeoutbench.main:main"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "tapeoutbench"
